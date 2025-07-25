@@ -2,7 +2,7 @@ export default () => `
   <!-- ========= Hero ========= -->
   <h1>Sicherheit, durch Technik</h1>
 
-  <img src="fps_logo.png" alt="fps logo" style="max-width: 100%; height: auto;">
+  <img src="./images/fps_logo.png" alt="fps logo" style="max-width: 100%; height: auto;">
 
   <section class="hero">
     <p>
