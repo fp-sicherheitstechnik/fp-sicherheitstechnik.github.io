@@ -2,7 +2,6 @@ const routes = {
   '/':        () => import('./views/home.js'),
   '/home':        () => import('./views/home2.js'),
   '/services':  () => import('./views/services.js'),
-  '/ueber':    () => import('./views/about.js'),
   '/team':     () => import('./views/team.js'),
   '/kontakt':  () => import('./views/contact.js'),
 

@@ -3,7 +3,7 @@
 :root {
     --primary: #02423F; /* dunkles Petrol */
     --secondary: #026861; /* helleres Petrol */
-    --light: #f7fafa;    /* Hintergrund hell */
+
     --dark: #1a1a1a;     /* Schrift dunkel */
 }
 
@@ -12,28 +12,41 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--dark);
     background: var(--light);
+    --light: #f7fafa;    /* Hintergrund hell */
     line-height: 1.6;
+    
+    height: 100vh;
+
+}
+
+h1 { 
+    padding:  20px; 
 }
 
 /* ---------- Header & Navigation ---------- */
 header {
     background: var(--primary);
-    padding: 10px 20px;
+    padding: 5px 10px;
     height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-bottom: 3px solid black;
 
     position: fixed;
     top: 0;
     width: 100%;
 }
-header img { height: 60px; }
+header img { 
+    height: 80px; 
+}
+
 nav ul {
     display: flex;
     gap: 20px;
@@ -49,38 +62,27 @@ nav a:hover { opacity: .3; }
 
 /* ---------- Main ---------- */
 main {
-    margin-top: 90px;
-    margin-bottom: 60px;
     padding: 5px;
-    display: flex; 
-    justify-content: center;
+    display: flex;
     align-items: center;
     flex-direction: column;
 
+    position: relative;
+    top: 90px; /* same height as the header */
+    min-height: calc(100vh - (90px + 60px)); /* subtract header and footer height from viewport height */
+
 }
+
 
 /* ---------- Hero ---------- */
 .hero {
-    position: relative;
-    background: url('banner-security.jpg') center/cover no-repeat;
-    color: #fff;
     text-align: center;
-    padding: 120px 20px;
+    padding: 20px;
 }
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(2, 66, 63, 0.65); /* dunkles Overlay */
-}
-.hero > * { position: relative; z-index: 1; }
-.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-.hero p  { font-size: 1.2rem; }
 
 /* ---------- Services ---------- */
 #leistungen {
     padding: 60px 20px;
-    background: #fff;
 }
 .services {
     display: grid;
@@ -89,8 +91,9 @@ main {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .service-card {
-    background: var(--light);
+    background: white;
     border-top: 4px solid var(--primary);
     padding: 20px;
     border-radius: 8px;
@@ -110,7 +113,6 @@ main {
 /* ---------- Team ---------- */
 #team {
     padding: 60px 20px;
-    background: #fff;
 }
 .team-grid {
     display: grid;
@@ -118,9 +120,10 @@ main {
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
+
 }
 .team-card {
-    background: var(--light);
+    background: white;
     border-left: 4px solid var(--primary);
     padding: 20px;
     border-radius: 8px;
@@ -174,6 +177,8 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
+    border-top: 3px solid black;
+
 
     position: fixed; 
     bottom: 0; 

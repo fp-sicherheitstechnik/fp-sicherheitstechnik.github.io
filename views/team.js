@@ -1,7 +1,9 @@
   export default () => `
+
   <!-- ========= Team ========= -->
+  <h1 style="text-align:center;">Unser Team</h1>
+
   <section id="team">
-    <h2 style="text-align:center;">Unser Team</h2>
     <div class="team-grid">
       <!-- Geschäftsführer -->
       <div class="team-card">
