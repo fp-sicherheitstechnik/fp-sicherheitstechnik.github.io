@@ -3,258 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>FP Sicherheitstechnik</title>
-  <style>
-    /* ========= Farbpalette – orientiert am Logo ========= */
-    :root {
-      --primary: #02423F; /* dunkles Petrol */
-      --secondary: #026861; /* helleres Petrol */
-      --light: #f7fafa;    /* Hintergrund hell */
-      --dark: #1a1a1a;     /* Schrift dunkel */
-    }
- 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
-      background: var(--light);
-      line-height: 1.6;
-    }
 
-    /* ---------- Header & Navigation ---------- */
-    header {
-      background: var(--primary);
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    header img { height: 60px; }
-    nav ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: opacity 0.2s;
-    }
-    nav a:hover { opacity: .8; }
+  <script type="module" src="routes.js" defer></script>
+  <link rel="stylesheet" href="stylesheet.css">
 
-    /* ---------- Hero ---------- */
-    .hero {
-      position: relative;
-      background: url('banner-security.jpg') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 120px 20px;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(2, 66, 63, 0.65); /* dunkles Overlay */
-    }
-    .hero > * { position: relative; z-index: 1; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    .hero p  { font-size: 1.2rem; }
-
-    /* ---------- Services ---------- */
-    #leistungen {
-      padding: 60px 20px;
-      background: #fff;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .service-card {
-      background: var(--light);
-      border-top: 4px solid var(--primary);
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    .service-card h3 { margin-top: 0; color: var(--primary); }
-
-    /* ---------- About ---------- */
-    #ueber {
-      padding: 60px 20px;
-      background: var(--secondary);
-      color: #fff;
-      text-align: center;
-    }
-    #ueber h2 { margin-bottom: 20px; }
-
-    /* ---------- Team ---------- */
-    #team {
-      padding: 60px 20px;
-      background: #fff;
-    }
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .team-card {
-      background: var(--light);
-      border-left: 4px solid var(--primary);
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .team-card img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-    }
-    .team-card h4 { margin: 10px 0 5px 0; color: var(--primary); }
-    .team-card span { font-size: 0.9rem; }
-
-    /* ---------- Contact ---------- */
-    #kontakt {
-      padding: 60px 20px;
-      background: var(--light);
-    }
-    #kontakt form {
-      max-width: 600px;
-      margin: 0 auto;
-      display: grid;
-      gap: 20px;
-    }
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font: inherit;
-    }
-    button {
-      padding: 12px;
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: opacity 0.2s;
-    }
-    button:hover { opacity: .85; }
-
-    /* ---------- Footer ---------- */
-    footer {
-      background: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 <body>
 
   <!-- ========= Header ========= -->
   <header>
-    <a href="#"><img src="fp_logo.png" alt="FP Sicherheitstechnik Logo"></a>
+    <a href="#/"><img src="fps_logo.png" alt="FP Sicherheitstechnik Logo"></a>
     <nav>
       <ul>
-        <li><a href="#leistungen">Leistungen</a></li>
-        <li><a href="#ueber">Über uns</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#/home">home</a></li>
+        <li><a href="#/services">Leistungen</a></li>
+        <li><a href="#/ueber">Über uns</a></li>
+        <li><a href="#/team">Team</a></li>
+        <li><a href="#/kontakt">Kontakt</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ========= Hero ========= -->
-  <section class="hero">
-    <h1>Ihre Sicherheit, unsere Technik</h1>
-    <p>Individuelle Sicherheitslösungen für Unternehmen & Privatkunden</p>
-  </section>
-
-  <!-- ========= Services ========= -->
-  <section id="leistungen">
-    <div class="services">
-      <div class="service-card">
-        <h3>Alarmanlagen</h3>
-        <p>Moderne Einbruchmeldeanlagen für optimalen Schutz.</p>
-      </div>
-      <div class="service-card">
-        <h3>Videoüberwachung</h3>
-        <p>HD‑Kameras & Aufzeichnungssysteme für lückenlose Kontrolle.</p>
-      </div>
-      <div class="service-card">
-        <h3>Zutrittskontrolle</h3>
-        <p>Elektronische Schließsysteme & Ausweiskarten‑Lösungen.</p>
-      </div>
-      <div class="service-card">
-        <h3>Brandschutz</h3>
-        <p>Frühwarnsysteme & Wartung nach DIN‑Normen.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========= About ========= -->
-  <section id="ueber">
-    <h2>Über FP Sicherheitstechnik</h2>
-    <p>Seit über 15 Jahren planen, installieren und warten wir maßgeschneiderte Sicherheitskonzepte. Kompetenz, Zuverlässigkeit und Diskretion machen uns zum vertrauensvollen Partner.</p>
-  </section>
-
-  <!-- ========= Team ========= -->
-  <section id="team">
-    <h2 style="text-align:center;">Unser Team</h2>
-    <div class="team-grid">
-      <!-- Geschäftsführer -->
-      <div class="team-card">
-        <img src="team-gf.jpg" alt="Geschäftsführer Platzhalter">
-        <h4>Frank Peters</h4>
-        <span>Geschäftsführer</span>
-      </div>
-      <!-- Assistenz der Geschäftsführung -->
-      <div class="team-card">
-        <img src="team-sek.jpg" alt="Assistenz der Geschäftsführung Platzhalter">
-        <h4>Lisa Berg</h4>
-        <span>Assistenz der Geschäftsführung</span>
-      </div>
-      <!-- Servicemitarbeiter -->
-      <div class="team-card">
-        <img src="team-service.jpg" alt="Servicetechniker Platzhalter">
-        <h4>Jonas Weber</h4>
-        <span>Servicetechniker</span>
-      </div>
-    </div>
-    <p style="text-align:center; margin-top:40px; font-size:0.9rem; color:#555;">Fotos sind Platzhalter – eigene Bilder können jederzeit ersetzt werden.</p>
-  </section>
-
-  <!-- ========= Contact ========= -->
-  <section id="kontakt">
-    <h2>Kontaktieren Sie uns</h2>
-    <form>
-      <input type="text" name="name" placeholder="Name*" required>
-      <input type="email" name="email" placeholder="E‑Mail*" required>
-      <input type="tel" name="phone" placeholder="Telefon">
-      <textarea name="message" rows="4" placeholder="Ihre Nachricht*" required></textarea>
-      <button type="submit">Absenden</button>
-    </form>
-  </section>
+  <!-- ========= Main ========= -->
+  <main id="app"></main>
 
   <!-- ========= Footer ========= -->
-  <footer>
-    © 2025 FP Sicherheitstechnik – Alle Rechte vorbehalten
+  <footer >
+    © 2025 FP Sicherheitstechnik - Alle Rechte vorbehalten
   </footer>
 
 </body>
