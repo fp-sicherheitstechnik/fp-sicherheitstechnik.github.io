@@ -9,7 +9,7 @@ export default () => `
       FP Sicherheitstechnik, ein kleines familiäres Unternehmen. 
     </p>
     <p>
-      Seit über 15 Jahren planen, installieren und warten wir maßgeschneiderte Sicherheitskonzepte. Kompetenz, Zuverlässigkeit und Diskretion machen uns zum vertrauensvollen Partner.
+      Seit über 15 Jahren planen, installieren und warten wir maßgeschneiderte Sicherheitskonzepte. Kompetenz, Zuverlässigkeit und Diskretion machen uns zum vertrauensvollen Partner.
     </p>
     <p>
       Das Unternehmen konzentriert sich auf Sicherheitstechnik speziell der DGUV V3 Prüfung und Instandhaltungsmaßnahme in ganz Deutschland.
