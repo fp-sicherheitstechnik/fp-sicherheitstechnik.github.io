@@ -1,78 +1,82 @@
-
-/* ========= Farbpalette – orientiert am Logo ========= */
+/* =========  Colour palette (logo-based) ========= */
 :root {
-    --primary: #02423F; /* dunkles Petrol */
-    --secondary: #026861; /* helleres Petrol */
-
-    --dark: #1a1a1a;     /* Schrift dunkel */
+  --primary:   #02423F;      /* dark petrol  */
+  --secondary: #026861;      /* lighter petrol */
+  --dark:      #1a1a1a;      /* body text     */
+  --light:     #f7fafa;      /* light background */
 }
 
+/* --- Reset --- */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* --- Global layout --- */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--dark);
-    background: var(--light);
-    --light: #f7fafa;    /* Hintergrund hell */
-    line-height: 1.6;
-    
-    height: 100vh;
-
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  background: var(--light);
+  line-height: 1.6;
 }
 
-h1 { 
-    padding:  20px; 
-}
+h1 { padding: 20px; }
+
+/* Buttons */
+/* button      { background: var(--primary); border: none; color: #fff; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: opacity .2s; }
+button:hover{ opacity: .85; } */
 
 /* ---------- Header & Navigation ---------- */
 header {
-    background: var(--primary);
-    padding: 5px 10px;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-bottom: 3px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    position: fixed;
-    top: 0;
-    width: 100%;
+  background: var(--primary);
+  padding: 5px 10px;
+  height: 90px;
+  border-bottom: 3px solid black;
+
+  /* stays at the top while scrolling but
+     still occupies its normal space */
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
+
 header img { 
     height: 80px; 
 }
 
-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
+.ct_logo  { 
+    margin-left: 5%;
 }
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: opacity 0.2s;
+
+nav { 
+    margin-right: 5%; 
 }
+
+nav ul { 
+    display: flex; 
+    gap: 30px; 
+    list-style: none; 
+}
+
+nav a       { color: #fff; text-decoration: none; font-weight: bold; transition: opacity .2s; }
 nav a:hover { opacity: .3; }
 
 /* ---------- Main ---------- */
 main {
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    position: relative;
-    top: 90px; /* same height as the header */
-    min-height: calc(100vh - (90px + 60px)); /* subtract header and footer height from viewport height */
-
+  flex: 1;                       /* fills remaining height */
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 /* ---------- Hero ---------- */
 .hero {
@@ -80,26 +84,30 @@ main {
     padding: 20px;
 }
 
-/* ---------- Services ---------- */
-#leistungen {
-    padding: 60px 20px;
+
+/* ---------- Services  ---------- */
+#leistungen { 
+    padding: 60px 20px; 
 }
+
 .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-card {
-    background: white;
-    border-top: 4px solid var(--primary);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fff;
+  border-top: 4px solid var(--primary);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  transition: transform .2s;
 }
-.service-card h3 { margin-top: 0; color: var(--primary); }
+
+.service-card:hover { transform: translateY(-4px); }
 
 /* ---------- About ---------- */
 #ueber {
@@ -108,12 +116,14 @@ main {
     color: #fff;
     text-align: center;
 }
+
 #ueber h2 { margin-bottom: 20px; }
 
 /* ---------- Team ---------- */
 #team {
     padding: 60px 20px;
 }
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -130,6 +140,7 @@ main {
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
+
 .team-card img {
     width: 120px;
     height: 120px;
@@ -139,6 +150,9 @@ main {
 }
 .team-card h4 { margin: 10px 0 5px 0; color: var(--primary); }
 .team-card span { font-size: 0.9rem; }
+
+.team-card:hover { transform: translateY(-4px); }
+
 
 /* ---------- Contact ---------- */
 #kontakt {
@@ -169,18 +183,15 @@ button {
 }
 button:hover { opacity: .85; }
 
+
 /* ---------- Footer ---------- */
 footer {
-    height: 60px;
-    background: var(--primary);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    border-top: 3px solid black;
-
-
-    position: fixed; 
-    bottom: 0; 
-    width: 100%;
+  height: 60px;
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: .9rem;
+  border-top: 3px solid black;
 }
