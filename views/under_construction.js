@@ -5,4 +5,4 @@ export default () => `
   </div>
 `;
 
-console.log("home.js geladen");
+console.log("under_constuction.js geladen");

@@ -36,4 +36,4 @@ export default () => `
   </section>
 `;
 
-console.log("home.js geladen");
+console.log("Startseite.js geladen");

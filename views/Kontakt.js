@@ -12,4 +12,4 @@
   </section>
 `;
 
-console.log("contact.js geladen");
+console.log("Kontakt.js geladen");

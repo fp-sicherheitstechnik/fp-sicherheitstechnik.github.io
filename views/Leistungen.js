@@ -24,4 +24,4 @@ export default () => `
   </section>
 `;
 
-console.log("services.js geladen");
+console.log("Leistungen.js geladen");

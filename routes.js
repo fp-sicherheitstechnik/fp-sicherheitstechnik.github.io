@@ -19,7 +19,6 @@ async function render() {
                     cache.set(path, m.default); return m.default;
                }));
   app.innerHTML = await mod();           // Modul liefert HTML‑String oder Promise
-  app.querySelector('h1')?.focus();
 }
 
 window.addEventListener('hashchange', render);
