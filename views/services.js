@@ -1,6 +1,6 @@
 export default () => `
   <!-- ========= Services ========= -->
-  <h1 tabindex="-1">Leistungen</h1>
+  <h2>Leistungen</h1>
 
   <section id="leistungen">
     <div class="services">

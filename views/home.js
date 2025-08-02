@@ -1,5 +1,5 @@
 export default () => `
-  <h1 tabindex="-1">under construction</h1>
+  <h2>! UNDER CONSTRUCTION !</h2>
   <div style="display: flex; justify-content: center;  width: 1000px; height: 500px">
     <img src="./images/under_cunstruction.png" alt="under construction">
   </div>

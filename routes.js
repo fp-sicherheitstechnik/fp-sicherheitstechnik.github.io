@@ -3,8 +3,9 @@ const routes = {
   '/home':        () => import('./views/home2.js'),
   '/services':  () => import('./views/services.js'),
   '/team':     () => import('./views/team.js'),
-  '/kontakt':  () => import('./views/contact.js'),
-
+  '/contact':  () => import('./views/contact.js'),
+  '/Impressum':  () => import('./views/Impressum.js'),
+  '/Datenschutz':  () => import('./views/Datenschutz.js'),
 
 };
 

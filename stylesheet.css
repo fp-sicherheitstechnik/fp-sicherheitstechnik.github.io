@@ -24,7 +24,6 @@ body {
   line-height: 1.6;
 }
 
-h1 { padding: 20px; }
 
 /* Buttons */
 /* button      { background: var(--primary); border: none; color: #fff; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: opacity .2s; }
@@ -32,33 +31,47 @@ button:hover{ opacity: .85; } */
 
 /* ---------- Header & Navigation ---------- */
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  
+    background: var(--primary);
+    padding: 5px 10px;
+    height: 80px;
+    border-bottom: 3px solid black;
 
-  background: var(--primary);
-  padding: 5px 10px;
-  height: 90px;
-  border-bottom: 3px solid black;
+    
+    /* stays at the top while scrolling but
+      still occupies its normal space */
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
 
-  /* stays at the top while scrolling but
-     still occupies its normal space */
-  position: sticky;
-  top: 0;
-  width: 100%;
+.ct_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 header img { 
-    height: 80px; 
+    height: 64px; 
 }
 
-.ct_logo  { 
-    margin-left: 5%;
+.ct_company { 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;    
 }
 
-nav { 
-    margin-right: 5%; 
+.ct_name {
+  font-weight: bold;
+  color: #fff; 
+  font-weight: bold;
 }
+
 
 nav ul { 
     display: flex; 
@@ -66,8 +79,17 @@ nav ul {
     list-style: none; 
 }
 
-nav a       { color: #fff; text-decoration: none; font-weight: bold; transition: opacity .2s; }
-nav a:hover { opacity: .3; }
+nav a       { 
+  font-size: 20px;
+  color: #fff; 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: opacity .2s; 
+}
+
+nav a:hover { 
+  opacity: .3; 
+}
 
 /* ---------- Main ---------- */
 main {
@@ -77,6 +99,11 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+main h2 { 
+  padding: 20px 10px 10px 10px;
+}
+
 
 /* ---------- Hero ---------- */
 .hero {
@@ -194,4 +221,22 @@ footer {
   margin-top: 20px;
   font-size: .9rem;
   border-top: 3px solid black;
+}
+
+footer a { 
+  color: #fff; 
+  text-decoration: none; 
+  transition: opacity .2s; 
+}
+
+.ct_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ct_links {
+  display: flex;
+  gap: 10px;
+
 }

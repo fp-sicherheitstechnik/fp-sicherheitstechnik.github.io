@@ -1,6 +1,6 @@
 export default () => `
   <!-- ========= About ========= -->
-  <h1>Über FP Sicherheitstechnik</h1>
+  <h2>Über FP Sicherheitstechnik</h2>
 
   <section id="ueber">
    
