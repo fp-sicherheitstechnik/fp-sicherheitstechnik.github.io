@@ -1,9 +1,9 @@
 const routes = {
-  '/':        () => import('./views/home.js'),
-  '/home':        () => import('./views/home2.js'),
-  '/services':  () => import('./views/services.js'),
-  '/team':     () => import('./views/team.js'),
-  '/contact':  () => import('./views/contact.js'),
+  '/':        () => import('./views/under_construction.js'),
+  '/Startseite':        () => import('./views/Startseite.js'),
+  '/Leistungen':  () => import('./views/Leistungen.js'),
+  '/Team':     () => import('./views/Team.js'),
+  '/Kontakt':  () => import('./views/Kontakt.js'),
   '/Impressum':  () => import('./views/Impressum.js'),
   '/Datenschutz':  () => import('./views/Datenschutz.js'),
 

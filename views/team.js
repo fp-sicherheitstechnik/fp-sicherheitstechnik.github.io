@@ -32,4 +32,4 @@
   </section>
 `;
 
-console.log("team.js geladen");
+console.log("Team.js geladen");
