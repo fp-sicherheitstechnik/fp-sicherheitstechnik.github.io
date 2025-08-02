@@ -1,6 +1,6 @@
 export default () => `
   <!-- ========= Team ========= -->
-  <h2 style="text-align:center;">Unser Team</h2>
+  <h2;">Unser Team</h2>
 
   <section id="team">
     <div class="team-grid">
