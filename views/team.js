@@ -1,5 +1,4 @@
   export default () => `
-
   <!-- ========= Team ========= -->
   <h2 style="text-align:center;">Unser Team</h2>
 
