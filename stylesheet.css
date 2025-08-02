@@ -1,3 +1,4 @@
+
 /* =========  Colour palette (logo-based) ========= */
 :root {
   --primary:   #02423F;      /* dark petrol  */
@@ -11,12 +12,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: none;
+
 }
 
 /* --- Global layout --- */
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--dark);
@@ -24,20 +28,18 @@ body {
   line-height: 1.6;
 }
 
-
 /* Buttons */
 /* button      { background: var(--primary); border: none; color: #fff; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: opacity .2s; }
 button:hover{ opacity: .85; } */
 
 /* ---------- Header & Navigation ---------- */
 header {
-  
+
     background: var(--primary);
     padding: 5px 10px;
     height: 80px;
     border-bottom: 3px solid black;
 
-    
     /* stays at the top while scrolling but
       still occupies its normal space */
     position: sticky;
@@ -98,19 +100,18 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 95%;
 }
 
 main h2 { 
   padding: 20px 10px 10px 10px;
 }
 
-
 /* ---------- Hero ---------- */
 .hero {
     text-align: center;
     padding: 20px;
 }
-
 
 /* ---------- Services  ---------- */
 #leistungen { 
@@ -159,6 +160,7 @@ main h2 {
     margin: 0 auto;
 
 }
+
 .team-card {
     background: white;
     border-left: 4px solid var(--primary);
@@ -175,11 +177,11 @@ main h2 {
     object-fit: cover;
     margin-bottom: 15px;
 }
+
 .team-card h4 { margin: 10px 0 5px 0; color: var(--primary); }
 .team-card span { font-size: 0.9rem; }
 
 .team-card:hover { transform: translateY(-4px); }
-
 
 /* ---------- Contact ---------- */
 #kontakt {
@@ -213,14 +215,14 @@ button:hover { opacity: .85; }
 
 /* ---------- Footer ---------- */
 footer {
-  height: 60px;
+  height: 40px;
   background: var(--primary);
   color: #fff;
   text-align: center;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 10px;
   font-size: .9rem;
   border-top: 3px solid black;
+  width: 100%;
 }
 
 footer a { 
@@ -230,13 +232,23 @@ footer a {
 }
 
 .ct_footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex;          /* flex container */
+  justify-content: center;/* center children horizontally */
+  align-items: center;    /* vertical alignment */
+  position: relative;     /* create containing block for absolute links */
+
+}
+
+.ct_copyright {
+  flex: 0 0 auto;        /* do not grow */
+  margin: 0 auto;        /* push left and right equally */
+  text-align: center;
 }
 
 .ct_links {
+  position: absolute;  /* pull out of flex flow */
+  right: 1rem;         /* stick to the right */
   display: flex;
-  gap: 10px;
-
+  gap: 1rem;
+  
 }
